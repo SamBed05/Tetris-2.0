@@ -1,27 +1,40 @@
 package tetris;
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 
 public class Frame extends JFrame{
 
-    JFrame frame;
-    JPanel panel;
-    GridBagConstraints gbc;
+    // JFrame frame;
+    // Panel main_panel;
+    static int WIDTH = 500;
+    static int HEIGHT = 500;
 
     Frame() {
-        frame = new JFrame("TETRIS");
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // frame = new JFrame("TETRIS");
+        this.setResizable(false);
+        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         
+        this.setTitle("TETRIS");
+    
+        // main_panel = new Panel(WIDTH, HEIGHT);
+        // main_panel.setVisible(true);
 
-        panel = new JPanel(new GridBagLayout());
-        frame.add(panel);
-        
-        frame.pack();
-        frame.setVisible(true);
+
+
+        // this.add(main_panel);
+        this.add(new Panel(WIDTH, HEIGHT));
+
+        this.pack();
+        this.setVisible(true);
     }
     
 }
+
+
+
+
+
